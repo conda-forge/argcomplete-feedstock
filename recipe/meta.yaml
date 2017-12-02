@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.9.3" %}
 
 package:
   name: argcomplete
@@ -6,17 +6,17 @@ package:
 
 source:
   fn: argcomplete-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/a/argcomplete/argcomplete-{{ version }}.tar.gz
-  md5: 1234c0e0db38c5181d8062177361cc4b
+  url: https://pypi.python.org/packages/8b/54/4a431fe1dfac0d9ae9adc725d2fe543fad07fb7d87f15bd732ba63672bb4/argcomplete-1.9.3.tar.gz
+  md5: 0d0c71c96a932977f60567566a6f5eac
 
 build:
   number: 0
   script: python setup.py install
+  noarch: python
 
 requirements:
   build:
-    - python
-    - setuptools
+    - setuptools 
 
   run:
     - python
