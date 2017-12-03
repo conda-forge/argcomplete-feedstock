@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  noarch: python
+#  noarch: python
 
 requirements:
   build:
@@ -24,6 +24,8 @@ requirements:
 test:
   imports:
     - argcomplete
+  commands:
+    - register-python-argcomplete -h
 
 about:
   home: https://github.com/kislyuk/argcomplete
