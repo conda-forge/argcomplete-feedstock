@@ -1,4 +1,4 @@
-{% set version = "1.8.2" %}
+{% set version = "1.9.3" %}
 
 package:
   name: argcomplete
@@ -6,17 +6,17 @@ package:
 
 source:
   fn: argcomplete-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/a/argcomplete/argcomplete-{{ version }}.tar.gz
-  md5: 1234c0e0db38c5181d8062177361cc4b
+  url:  https://pypi.io/packages/source/a/argcomplete/argcomplete-{{ version }}.tar.gz
+  sha256: d97b7f3cfaa4e494ad59ed6d04c938fc5ed69b590bd8f53274e258fb1119bd1b
 
 build:
   number: 0
-  script: python setup.py install
-
+  script: python setup.py install --single-version-externally-managed --record record.txt
+  # disabled due to https://github.com/conda/conda-build/issues/2627 
+  #noarch: python
 requirements:
   build:
-    - python
-    - setuptools
+    - setuptools 
 
   run:
     - python
@@ -24,6 +24,8 @@ requirements:
 test:
   imports:
     - argcomplete
+  commands:
+    - register-python-argcomplete -h
 
 about:
   home: https://github.com/kislyuk/argcomplete
