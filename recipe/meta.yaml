@@ -35,7 +35,9 @@ about:
   license: Apache-2.0
   summary: Bash tab completion for argparse
   license_family: Apache
-  license_file: LICENSE.rst
+  license_file:
+    - LICENSE.rst
+    - NOTICE
   doc_url: https://argcomplete.readthedocs.io
   dev_url: https://github.com/kislyuk/argcomplete
 
