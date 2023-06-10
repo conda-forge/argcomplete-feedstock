@@ -1,5 +1,5 @@
 {% set name = "argcomplete" %}
-{% set version = "3.0.8" %}
+{% set version = "3.1.0" %}
 
 package:
   name: argcomplete
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/argcomplete-{{ version }}.tar.gz
-  sha256: b9ca96448e14fa459d7450a4ab5a22bbf9cee4ba7adddf03e65c398b5daeea28
+  sha256: 3a81445fa51c9875c36789ae5386d5e95c5c43d503963a0029a747aea74de1e3
 
 build:
   number: 0
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - setuptools
     - pip
   run:
     # this avoids the need to include importlib-metadata
-    - python >=3.7
+    - python >=3.8
 
 test:
   requires:
