@@ -17,7 +17,8 @@ build:
 requirements:
   host:
     - python >=3.8
-    - setuptools
+    - setuptools >=67.7.2
+    - setuptools-scm >=6.2
     - pip
   run:
     # this avoids the need to include importlib-metadata
