@@ -1,5 +1,5 @@
 {% set name = "argcomplete" %}
-{% set version = "3.1.6" %}
+{% set version = "3.2.0" %}
 
 package:
   name: argcomplete
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/argcomplete-{{ version }}.tar.gz
-  sha256: 3b1f07d133332547a53c79437527c00be48cca3807b1d4ca5cab1b26313386a6
+  sha256: f6d23fcdec0c53901a40f7b908f6c55ffc1def5a5012a7bb97479ceefd3736e3
 
 build:
   number: 0
