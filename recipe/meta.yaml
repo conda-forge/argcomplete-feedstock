@@ -1,5 +1,5 @@
 {% set name = "argcomplete" %}
-{% set version = "3.5.2" %}
+{% set version = "3.6.0" %}
 
 package:
   name: argcomplete
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/argcomplete-{{ version }}.tar.gz
-  sha256: 23146ed7ac4403b70bd6026402468942ceba34a6732255b9edf5b7354f68a6bb
+  sha256: 2e4e42ec0ba2fff54b0d244d0b1623e86057673e57bafe72dda59c64bd5dee8b
 
 build:
   number: 0
@@ -17,8 +17,8 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=67.7.2
-    - setuptools-scm >=6.2
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - python >={{ python_min }}
