@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: argcomplete
-  version: "3.7.2"
+  version: "3.8.0"
 
 package:
   name: argcomplete
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/argcomplete-${{ version }}.tar.gz
-  sha256: aad8b69a0b9969edb62db0d1752354c0d50717b10e0cbb00e2a958381b9fc6b9
+  sha256: 0114d634013e11ac92cc329b3a7d886c3506e98ddc7bb23c99b1782aacc8b8bd
 
 build:
   number: 0
@@ -20,9 +20,9 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
+    - pip
     - hatchling
     - hatch-vcs
-    - pip
   run:
     - python >=${{ python_min }}
 
