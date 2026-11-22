@@ -20,9 +20,9 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
+    - pip
     - hatchling
     - hatch-vcs
-    - pip
   run:
     - python >=${{ python_min }}
 
